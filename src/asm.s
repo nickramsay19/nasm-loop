@@ -11,6 +11,6 @@ _procedure:
     
 _loop:
     inc edi
-    cmp edi, 10
+    cmp edi, esi
     jl _loop
     ret
