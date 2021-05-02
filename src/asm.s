@@ -1,16 +1,13 @@
-global  _getIntVal
-global  _setIntVal
 global _procedure
 
 section .text
 _procedure:
-    mov edi, 0
     call _loop
-    mov eax, edi
+    mov eax, edi ; move result into return reg
     ret
     
 _loop:
-    inc edi
+    inc edi ; increment start param (edi)
     cmp edi, esi
-    jl _loop
+    jl _loop ; jump if esi < edi
     ret
